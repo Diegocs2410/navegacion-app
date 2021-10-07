@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
-import { UseUser } from '../context/UserContext';
+import { ContextUser } from '../context/UserContext';
 
 export const Login = () => {
   const history = useHistory();
-  const { setLogin } = UseUser();
+  const { setLogin } = ContextUser();
   const [userData, setUserData] = useState({
     user: '',
     password: '',

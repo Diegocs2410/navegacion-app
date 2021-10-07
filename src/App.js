@@ -3,10 +3,10 @@ import { DashBoard } from './components/DashBoard';
 import { Login } from './components/Login';
 import { NavBar } from './components/navbar/NavBar';
 import { Root } from './components/Root';
-import { UseUser } from './context/UserContext';
+import { ContextUser } from './context/UserContext';
 
 function App() {
-  const { login } = UseUser();
+  const { login } = ContextUser();
 
   const validar = () => (login ? true : false);
   const Public = (props) => (validar() ? <Redirect to='/root' /> : <Route {...props} />);

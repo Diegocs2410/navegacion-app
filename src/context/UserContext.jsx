@@ -15,7 +15,7 @@ export const UserProvider = (props) => {
 
   return <UserContext.Provider value={value} {...props} />;
 };
-export const UseUser = () => {
+export const ContextUser = () => {
   const context = useContext(UserContext);
   if (!context) {
     throw new Error(

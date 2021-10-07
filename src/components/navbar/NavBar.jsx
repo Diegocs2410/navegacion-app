@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { UseUser } from '../../context/UserContext';
+import { ContextUser } from '../../context/UserContext';
 
 export const NavBar = () => {
-  const { login, setLogin } = UseUser();
+  const { login, setLogin } = ContextUser();
 
   const logout = () => {
     setLogin(false);
