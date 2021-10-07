@@ -12,10 +12,12 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (userData.user === 'Diego' && userData.password === '1234') {
+      localStorage.setItem('user', true);
       setLogin(true);
       alert('Bienvenido don Diego');
       history.push('/root');
     } else {
+      localStorage.setItem('user', false);
       alert('Usuario/Contraseña incorrectos, por favor intente nuevamente');
       setLogin(false);
     }

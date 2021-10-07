@@ -7,6 +7,7 @@ export const NavBar = () => {
 
   const logout = () => {
     setLogin(false);
+    localStorage.setItem('user', false);
   };
 
   return (
